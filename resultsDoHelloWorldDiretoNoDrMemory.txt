@@ -1,0 +1,64 @@
+Dr. Memory version 2.3.0 build 1 built on Feb  6 2020 06:09:03
+Windows version: WinVer=105;Rel=2004;Build=19041;Edition=Core
+Dr. Memory results for pid 19808: "helloworld.exe"
+Application cmdline: "C:\Users\varga\Desktop\AED1-1\helloworld\helloworld.exe"
+Recorded 118 suppression(s) from default C:\Program Files (x86)\Dr. Memory\bin\suppress-default.txt
+
+Error #1: UNINITIALIZED READ: reading register eax
+# 0 KERNELBASE.dll!FindNextFileW                   +0x109    (0x76140899 <KERNELBASE.dll+0x110899>)
+# 1 KERNELBASE.dll!FindNextFileA                   +0x33     (0x761430e4 <KERNELBASE.dll+0x1130e4>)
+# 2 .text         
+# 3 __mingw_glob  
+# 4 _setargv      
+# 5 .text         
+# 6 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0xe3     (0x778775f4 <ntdll.dll+0x675f4>)
+# 7 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0xb3     (0x778775c4 <ntdll.dll+0x675c4>)
+Note: @0:00:00.337 in thread 2016
+Note: instruction: cmp    %eax $0x00000018
+
+Error #2: UNINITIALIZED READ: reading register eax
+# 0 KERNELBASE.dll!FindNextFileW                   +0x12e    (0x761408be <KERNELBASE.dll+0x1108be>)
+# 1 KERNELBASE.dll!FindNextFileA                   +0x33     (0x761430e4 <KERNELBASE.dll+0x1130e4>)
+# 2 .text         
+# 3 __mingw_glob  
+# 4 _setargv      
+# 5 .text         
+# 6 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0xe3     (0x778775f4 <ntdll.dll+0x675f4>)
+# 7 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0xb3     (0x778775c4 <ntdll.dll+0x675c4>)
+Note: @0:00:00.342 in thread 2016
+Note: instruction: data16 mov    %cx -> 0x00000234(%esi,%eax,2)
+
+Error #3: UNINITIALIZED READ: reading register eax
+# 0 KERNELBASE.dll!FindNextFileW                   +0x7a     (0x7614080a <KERNELBASE.dll+0x11080a>)
+# 1 KERNELBASE.dll!FindNextFileA                   +0x33     (0x761430e4 <KERNELBASE.dll+0x1130e4>)
+# 2 .text         
+# 3 __mingw_glob  
+# 4 _setargv      
+# 5 .text         
+# 6 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0xe3     (0x778775f4 <ntdll.dll+0x675f4>)
+# 7 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0xb3     (0x778775c4 <ntdll.dll+0x675c4>)
+Note: @0:00:00.347 in thread 2016
+Note: instruction: test   %eax %eax
+
+===========================================================================
+FINAL SUMMARY:
+
+DUPLICATE ERROR COUNTS:
+	Error #   1:      4
+	Error #   2:      4
+
+SUPPRESSIONS USED:
+
+ERRORS FOUND:
+      0 unique,     0 total unaddressable access(es)
+      3 unique,     9 total uninitialized access(es)
+      0 unique,     0 total invalid heap argument(s)
+      0 unique,     0 total GDI usage error(s)
+      0 unique,     0 total handle leak(s)
+      0 unique,     0 total warning(s)
+      0 unique,     0 total,      0 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+      6 unique,     6 total,   4442 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: C:\Users\varga\AppData\Roaming\Dr. Memory\DrMemory-helloworld.exe.19808.000\results.txt

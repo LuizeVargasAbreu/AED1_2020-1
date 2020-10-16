@@ -1,0 +1,69 @@
+Dr. Memory version 2.3.0 build 1 built on Feb  6 2020 06:09:03
+Windows version: WinVer=105;Rel=2004;Build=19041;Edition=Core
+Dr. Memory results for pid 7076: "agendaNomes.exe"
+Application cmdline: "C:\Users\varga\Desktop\AED1_2020-1\agendaNomes.exe"
+Recorded 118 suppression(s) from default C:\Program Files (x86)\Dr. Memory\bin\suppress-default.txt
+
+Error #1: UNINITIALIZED READ: reading register eax
+# 0 KERNELBASE.dll!FindNextFileW                   +0x109    (0x76140899 <KERNELBASE.dll+0x110899>)
+# 1 KERNELBASE.dll!FindNextFileA                   +0x33     (0x761430e4 <KERNELBASE.dll+0x1130e4>)
+# 2 .text          
+# 3 __mingw_glob   
+# 4 _setargv       
+# 5 .text          
+# 6 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0xe3     (0x778775f4 <ntdll.dll+0x675f4>)
+# 7 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0xb3     (0x778775c4 <ntdll.dll+0x675c4>)
+Note: @0:00:00.333 in thread 8300
+Note: instruction: cmp    %eax $0x00000018
+
+Error #2: UNINITIALIZED READ: reading register eax
+# 0 KERNELBASE.dll!FindNextFileW                   +0x12e    (0x761408be <KERNELBASE.dll+0x1108be>)
+# 1 KERNELBASE.dll!FindNextFileA                   +0x33     (0x761430e4 <KERNELBASE.dll+0x1130e4>)
+# 2 .text          
+# 3 __mingw_glob   
+# 4 _setargv       
+# 5 .text          
+# 6 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0xe3     (0x778775f4 <ntdll.dll+0x675f4>)
+# 7 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0xb3     (0x778775c4 <ntdll.dll+0x675c4>)
+Note: @0:00:00.336 in thread 8300
+Note: instruction: data16 mov    %cx -> 0x00000234(%esi,%eax,2)
+
+Error #3: UNINITIALIZED READ: reading register eax
+# 0 KERNELBASE.dll!FindNextFileW                   +0x7a     (0x7614080a <KERNELBASE.dll+0x11080a>)
+# 1 KERNELBASE.dll!FindNextFileA                   +0x33     (0x761430e4 <KERNELBASE.dll+0x1130e4>)
+# 2 .text          
+# 3 __mingw_glob   
+# 4 _setargv       
+# 5 .text          
+# 6 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0xe3     (0x778775f4 <ntdll.dll+0x675f4>)
+# 7 ntdll.dll!RtlGetAppContainerNamedObjectPath    +0xb3     (0x778775c4 <ntdll.dll+0x675c4>)
+Note: @0:00:00.343 in thread 8300
+Note: instruction: test   %eax %eax
+
+Error #4: LEAK 104 direct bytes 0x01360ea0-0x01360f08 + 0 indirect bytes
+# 0 replace_malloc               [d:\drmemory_package\common\alloc_replace.c:2577]
+# 1 criaLista      
+# 2 main           
+
+===========================================================================
+FINAL SUMMARY:
+
+DUPLICATE ERROR COUNTS:
+	Error #   1:      7
+	Error #   2:      7
+
+SUPPRESSIONS USED:
+
+ERRORS FOUND:
+      0 unique,     0 total unaddressable access(es)
+      3 unique,    15 total uninitialized access(es)
+      0 unique,     0 total invalid heap argument(s)
+      0 unique,     0 total GDI usage error(s)
+      0 unique,     0 total handle leak(s)
+      0 unique,     0 total warning(s)
+      1 unique,     1 total,    104 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+      6 unique,     6 total,   4437 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: C:\Users\varga\AppData\Roaming\Dr. Memory\DrMemory-agendaNomes.exe.7076.000\results.txt
