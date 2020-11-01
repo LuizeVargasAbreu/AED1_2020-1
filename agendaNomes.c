@@ -16,7 +16,7 @@ void listarNome(agN *inicio);
 
 int main()
 {
-    agN *inicio, *pos;
+    agN *inicio, *pos;  /*Dia 24/10 compilei o agendaNomes com o -Wall no terminal e ele detectou erro nessa linha. O erro era o *pos que estava sem uso*/
     inicio = criaLista();
     int op;
 
