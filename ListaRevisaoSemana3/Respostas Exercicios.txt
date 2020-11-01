@@ -1,0 +1,21 @@
+                Lista de Revisão - AED
+1- E
+2- O trecho 1 imprime uma matriz 2x2 na tela percorrendo o vetor de forma tradicional;
+   O trecho 2 também imprime uma matriz 2x2, porém agora ele precorre o vetor usando ponteiros.
+   
+3- 
+    a) 3
+    b) -2 
+    c) 3
+    d) 6
+4- endereço de i, 7, 5, 15, 9.
+5- A
+6- 
+    a) é válida e p receberá o próximo valor de mat, no caso o segundo elemento;
+    b) não é válida, pois não se pode incrementar endereço de um vetor; 
+    c) não é válida pelo mesmo motivo da letra b;
+    d) é valida, pois x recebe um valor de mat (mat[0]) e depois incrementa.
+
+10 -
+	a) Essa função retorna o quadrado do valor de entrada n.
+	b) O valor de j é: 100.
