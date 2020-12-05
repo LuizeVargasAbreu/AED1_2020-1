@@ -5,7 +5,7 @@
 struct agendaNomes
 {
     char nome[100];
-    struct agendaNomes *prox;
+    struct agendaNomes *prox;               // endereço do próximo conteúdo
 };
 
 typedef struct agendaNomes agN;
@@ -60,7 +60,7 @@ int main()
     return 0;
 }
 
-agN *criaLista()
+agN *criaLista()  //criando uma lista vazia com cabeça
 {
     agN *start;
 
@@ -69,15 +69,15 @@ agN *criaLista()
     return start;
 }
 
-void adicionarNome(agN *inicio)
+void adicionarNome(agN *inicio)  //inserindo uma nova celula na lista
 {
     agN *nvNome;
-    nvNome = (agN *)malloc(sizeof(agN));
+    nvNome = (agN *)malloc(sizeof(agN));    // alocando espaço na memoria
 
     printf("\n\t----- Adicionando Nomes -----");
     printf("\n\tDigite um nome: ");
-    scanf("%s", nvNome->nome);
-    nvNome->prox = inicio->prox;
+    scanf("%s", nvNome->nome);              //nvNome tem conteudo de nome
+    nvNome->prox = inicio->prox;            //nome é inserido entre a celula inicio e o seguinte, tudo isso para inicio != null
     inicio->prox = nvNome;
 }
 
@@ -92,15 +92,15 @@ void removerNome(agN *inicio)
 
     p = inicio;
     q = inicio->prox;
-    while ((q != NULL) && (strcmp(q->nome, nome) != 0))
+    while ((q != NULL) && (strcmp(q->nome, nome) != 0))  //busca o nome que o usuario quer remover
     {
         p = q;
         q = q->prox;
     }
-    if (q != NULL)
+    if (q != NULL)  //se o nome existir, remove da lista
     {
         p->prox = q->prox;
-        free(q);
+        free(q);                                    //libera espaco na memoria
         printf("\tNome removido com sucesso!\n");
     }
     else
@@ -114,8 +114,8 @@ void listarNome(agN *inicio)
     agN *listar;
 
     printf("\n\t----- Lista de Nomes -----");
-    for (listar = inicio->prox; listar != NULL; listar = listar->prox)
-    {
-        printf("\n\tNome: %s\n", listar->nome);
+    for (listar = inicio->prox; listar != NULL; listar = listar->prox) //lista recebe o valor que está na lista,
+    {                                                                  //se ela for != de NULL, tem algo lá dentro, então listar->prox é uma lista
+        printf("\n\tNome: %s\n", listar->nome);                        //imprime nome da lista
     }
 }
